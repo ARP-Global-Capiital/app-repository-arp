@@ -1,0 +1,22 @@
+# Environment variables
+.env
+
+# SFTP data directory (uploaded files)
+data/
+
+# SSH keys
+ssh_keys/
+
+# Docker volumes
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

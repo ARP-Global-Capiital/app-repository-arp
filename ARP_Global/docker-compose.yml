@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  sftp:
+    image: atmoz/sftp:latest
+    container_name: arp_global_sftp
+    ports:
+      - "0.0.0.0:${SFTP_PORT:-2222}:22"
+    volumes:
+      - ./data:/home/${SFTP_USER}/upload
+      - ./hosts.allow:/etc/hosts.allow:ro
+      - ./hosts.deny:/etc/hosts.deny:ro
+    environment:
+      - SFTP_USERS=${SFTP_USER}:${SFTP_PASSWORD}:1001:100:upload
+    restart: unless-stopped
+    networks:
+      - sftp_network
+
+networks:
+  sftp_network:
+    driver: bridge

@@ -1,0 +1,17 @@
+# TCP Wrappers configuration - Allow only specific IPs
+# Format: service: IP/network
+
+# Allow Broadridge IPs
+sshd: 38.101.185.196
+sshd: 38.103.44.196
+sshd: 74.119.32.196
+sshd: 74.119.33.196
+sshd: 74.119.34.196
+sshd: 74.119.36.196
+
+# Allow testing IP
+sshd: 92.97.177.239
+
+# Allow local connections
+sshd: 127.0.0.1
+sshd: ::1

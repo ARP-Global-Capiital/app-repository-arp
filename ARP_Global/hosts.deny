@@ -1,0 +1,5 @@
+# TCP Wrappers configuration - Deny all other IPs
+# Format: service: ALL
+
+# Deny all other connections to SSH/SFTP
+# sshd: ALL
